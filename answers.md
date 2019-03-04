@@ -61,3 +61,8 @@ Degrees 	Compass Direction
 6. If it runs into something, yes. If there is a rock in front of it, it can no longer move, so it will turn to avoid it.
 
 7. After it reaches the boundary of the box and turns 90 degrees.
+
+## Exercises
+
+1. The CircleBug turns 45 degrees instead of 90, so it creates an octagon shape instead of a square.
+
