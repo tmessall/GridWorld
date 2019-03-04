@@ -66,3 +66,4 @@ Degrees 	Compass Direction
 
 1. The CircleBug turns 45 degrees instead of 90, so it creates an octagon shape instead of a square.
 
+5. Create a new BoxBug, and do a world.add(Location, BoxBug) to add a new one to the grid.
