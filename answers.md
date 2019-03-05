@@ -2,6 +2,8 @@
 
 ## Do You Know?
 
+### Set 1
+
 1. No, the bug does not always move to a new location. Sometimes it will turn instead.
 
 2. Forwards (the direction the antennae are facing)
@@ -48,6 +50,8 @@ Degrees 	Compass Direction
 
 ## Do You Know?
 
+### Set 2
+
 1. To make sure the bug does not try to move outside of its box.
 
 2. To count how many grids the bug has moved in order to make sure it does not try to move outside its box.
@@ -79,6 +83,8 @@ Degrees 	Compass Direction
 
 ## Do You Know?
 
+### Set 3
+
 1. loc1.getRow()
 
 2. false
@@ -89,3 +95,12 @@ Degrees 	Compass Direction
 
 5. It is fed a direction when called
 
+### Set 4
+
+1. ArrayList<Location> getOccupiedLocations() to obtain a count of the objects in the grid (each occupied location contains an object), and then getNumRows() * getNumCols() to find the number of locations, and subtract the number of occupied from the number of total locations to obtain a count of all of the empty locations in a bounded grid.
+
+2. isValid(new Location(10, 10))
+
+3. Because Grid is an interface is something larger which allows other things to interact, such as locations and objects in this case. As such, the way it does that is beyond our view, but what matters is we can make other objects interact in grids.
+
+4. No, if a grid was unbounded it could have a very large number of objects in it, and the number of objects could change. An ArrayList adapts to changes in list sizes better than an Array, and will not have empty spots if something is removed. As such, an ArrayList is the better option.
