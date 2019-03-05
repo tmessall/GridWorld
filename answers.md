@@ -104,3 +104,15 @@ Degrees 	Compass Direction
 3. Because Grid is an interface is something larger which allows other things to interact, such as locations and objects in this case. As such, the way it does that is beyond our view, but what matters is we can make other objects interact in grids.
 
 4. No, if a grid was unbounded it could have a very large number of objects in it, and the number of objects could change. An ArrayList adapts to changes in list sizes better than an Array, and will not have empty spots if something is removed. As such, an ArrayList is the better option.
+
+### Set 5
+
+1. Color, Direction, and Location
+
+2. Blue and North
+
+3. Because there are many kinds of the Actor class which have to interact with each other, rather than just being a platform for other classes to interact with each other.
+
+4. No, the actor cannot put itself into a grid twice because one of the preconditions of doing this is that the actor is not contained within a grid. The same goes for removing itself twice, as one of the preconditions is that the actor is contained within a grid. If the actor is put in, removed, and put back in, it is replaced and is a new actor. This can be tested by changing the color, then removing an actor then replacing it. The actor is reset.
+
+5. setDirection(getDirection() + 90)
