@@ -116,3 +116,47 @@ Degrees 	Compass Direction
 4. No, the actor cannot put itself into a grid twice because one of the preconditions of doing this is that the actor is not contained within a grid. The same goes for removing itself twice, as one of the preconditions is that the actor is contained within a grid. If the actor is put in, removed, and put back in, it is replaced and is a new actor. This can be tested by changing the color, then removing an actor then replacing it. The actor is reset.
 
 5. setDirection(getDirection() + 90)
+
+### Set 6
+
+1.  Location next = loc.getAdjacentLocation(getDirection());
+	if (!gr.isValid(next)) {
+		return false;
+	}
+
+2.  Actor neighbor = gr.get(next);     
+	return (neighbor == null) || (neighbor instanceof Flower); 
+
+3. isValid(Location loc), get(Location loc) are both used to make sure that there is not an obstruction and that there is a real location in front of the bug.
+
+4. getAdjacentLocation(int direction) is used to get the location in front of the bug in so that grid can check that location for existence/a rock.
+
+5. getGrid() and getLocation() are both used to ensure that the actor can move, and the location/grid are used to check other instances that would prevent movement (such as a rock).
+
+6. It removes itself from the grid.
+
+7. A flower has to be put in the grid after the bug has moved, so getLocation() would not work for that instance. In the other two times that loc is used, though, it would be okay to use getLocation() instead of creating a variable.
+
+8. Because the bug passes its color to the flower.
+
+9. Yes, a flower is always added to the bugs location at the beginning of the move() function at the end.
+
+10. flower.putSelfInGrid(gr, loc);
+
+11. 4 times
+
+## Group Activity
+
+1.  a. The jumper will move forwards one step, then try to jump again.
+	b. The jumper will move forwards once then turn to the right.
+	c. It will turn to the right and see if it is facing the edge of the grid still.
+	d. It will move forwards once then try to jump again.
+	e. It will jump over it, if possible.
+	f. If it can can jump or not.
+
+2.  a. The Bug class, it is fairly similar in behavior and Jumper is only slightly more 	complicated.
+	b. The Bug class is similar. 
+	c. No, the way it moves just has to be different.
+	d. act() should be overwritten.
+	e. canJump(), to test if the jumper can jump, and jump(), to make the jumper jump.
+	f. Create a tester and add various objects in front to see whether or not it works.
