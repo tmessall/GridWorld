@@ -160,3 +160,22 @@ Degrees 	Compass Direction
 	d. act() should be overwritten.
 	e. canJump(), to test if the jumper can jump, and jump(), to make the jumper jump.
 	f. Create a tester and add various objects in front to see whether or not it works.
+
+
+# Part 4
+
+## Do You Know?
+
+### Set 7
+
+1. getGrid(), getActors(), processActors(), getMoveLocations(), selectMoveLocation(), makeMove(), getNeighbors(), getLocation(), removeSelfFromGrid(), getEmptyAdjacentLocations(), moveTo()
+
+2. getActors(), processActors(), getMoveLocations(), selectMoveLocation(), makeMove()
+
+3. No, the getActors() method should be suitable for all critter daughter classes because it is simply looking at what actors are around the critter.
+
+4. It could simply save the locations of all of them, it could remove them if they are not of a certain type and then save the locations of the ones that were not removed, or it could randomly pick N actors and remove them then save those locations.
+
+5. getMoveLocations(), selectMoveLocation(), and moveTo(Location). The first one finds what locations are unoccupied (or occupied by an actor that will be removed) and the critter could theoretically move to. The second decides which among this list of locations the critter will move to, and the third moves the critter to the decided location.
+
+6. Because a critter is just an actor that processes other actors, and as such does not need a constructor because it is a basic actor.
