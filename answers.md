@@ -179,3 +179,33 @@ Degrees 	Compass Direction
 5. getMoveLocations(), selectMoveLocation(), and moveTo(Location). The first one finds what locations are unoccupied (or occupied by an actor that will be removed) and the critter could theoretically move to. The second decides which among this list of locations the critter will move to, and the third moves the critter to the decided location.
 
 6. Because a critter is just an actor that processes other actors, and as such does not need a constructor because it is a basic actor.
+
+### Set 8
+
+1. Because a ChameleonCritter overrides the methods that are invoked in act, without overriding act itself.
+
+2. Because after the ChameleonCritter begins facing towards whatever object it copied the color of, it moves in exactly the same way as a critter.
+
+3. By adding it to the makeMove() method of the Chameleon Critter.
+
+4. Because the process of searching all the neighboring locations for actors does not need to be changed, even though the behavior of a ChameleonCritter changes some.
+
+5. The Actor Class
+
+6. getGrid()
+
+### Set 9
+
+1. Because it inherits the only restriction it needs for processing actors from the Critter class.
+
+2. It looks at all the locations in front (frontleft, front, frontright) and if there is an actor therre then it adds that actor to a list of actors. Then, in the processActors() (which is given down from critter), it eats all actors in the list that are not rocks or critters. It will eat all actors that are any other type.
+
+3. Because the crab can only move left or right, so those are the only two locations that have to be checked.
+
+4. (4, 3), (4, 4), (4, 5)
+
+5. They both pick an adjacent locations to move to, but the crabs can only be right or left.
+
+6. It checks if the locations to its right and left are occupied, and turns if they both are.
+
+7. Because CrabCritters don't eat other critters, and a CrabCritter is a type of critter.
