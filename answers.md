@@ -209,3 +209,7 @@ Degrees 	Compass Direction
 6. It checks if the locations to its right and left are occupied, and turns if they both are.
 
 7. Because CrabCritters don't eat other critters, and a CrabCritter is a type of critter.
+
+## Group Activity
+
+1. RainbowCritters randomly select one of the four objects in the corner, then turn into that color. After that, they remove all surrounding objects that are the same color as them, then move like a critter. If there is not an object in any of the four corners, the RainbowCritter will brighten its color and then push all objects in the surrounding area away, and move like a critter.
